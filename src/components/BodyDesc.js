@@ -1,6 +1,13 @@
 import styled from "styled-components";
-import Titile from './Titile'
 
-const BodyDesc = styled(Titile)``
+const BodyDesc = styled.h2`
+    margin-top: unset;
+`
 
-export default BodyDesc;
+const WrapperBodyDesc = (props) => {
+    return (
+        <BodyDesc>{props.bodyDesc}</BodyDesc>
+    )
+}
+
+export default WrapperBodyDesc;

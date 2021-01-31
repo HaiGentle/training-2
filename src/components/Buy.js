@@ -1,14 +1,18 @@
 import styled from "styled-components";
 
 const Buy = styled.button`
-    width: 80%;
+    width: 100%;
     height: 3em;
     color: white;
     background-color: black;
-    border-radius: 3px;
+    border-radius: 7px;
     text-align: center;
-    margin-left: 10%;
     margin-top: 2em;
 `
+const WapperBuy = (props) => {
+    return (
+        <Buy>{props.buy}</Buy>
+    )
+}
 
-export default Buy;
+export default WapperBuy;

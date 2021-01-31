@@ -7,30 +7,30 @@ import Buy from './Buy'
 import Header from './Header'
 import Title from './Titile'
 import TitleDesc from './TitleDesc'
-import TitlePrice from './TitlePrice'
+import Price from './Price'
 import Wrapper from './Wrapper'
 
 const Hobby = (props) => {
-    const Detail  = props.Detail;
+    const { detail, title, titleDesc, price, buy, bodyDesc } = props;
     return (
         <Wrapper>
             <Header>
-                <Title> {props.Title} </Title>
-                <TitleDesc> {props.TitleDesc} </TitleDesc>
-                <TitlePrice>
+                <Title title={title} />
+                <TitleDesc titleDesc={titleDesc} />
+                <Price>
                     <FontAwesomeIcon icon={faDollarSign} />
-                    {props.TitlePrice}
+                    {price}
                     /mo
-                </TitlePrice>
-                <Buy> {props.Buy} </Buy>
+                </Price>
+                <Buy buy={buy} />
             </Header>
             <Body>
-                <BodyDesc> {props.BodyDesc} </BodyDesc>
+                <BodyDesc bodyDesc={bodyDesc} />
                 {
-                    Detail.map( (detail,i) => (
+                    detail.map((item, i) => (
                         <BodyDetail key={i}>
-                            <FontAwesomeIcon icon={faCheck} color="green"/>
-                            {detail}
+                            <FontAwesomeIcon icon={faCheck} color="green" />
+                            {item}
                         </BodyDetail>
                     ))
                 }

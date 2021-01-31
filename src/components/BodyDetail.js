@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import TitleDesc from './TitleDesc'
 
-const BodyDetail = styled(TitleDesc)``
+const BodyDetail = styled.p`
+color: gray;
+`
 
 export default BodyDetail;
